@@ -1,12 +1,25 @@
 grammar InfixMath;
 
 
+OP
+    : PLUS
+    | MINUS
+    | MULTIPLY
+    | DIVIDE
+    ;
 
 PLUS : '+';
 MINUS : '-';
 MULTIPLY : '*';
 DIVIDE : '/';
 
-NUMBER : [0-9]+;
+OPAREN : '(';
+CPAREN : ')';
+
+NUMBER
+    : INTEGER
+    ;
+
+INTEGER : [0-9]+;
 
 SPACE : [ ] -> skip;
