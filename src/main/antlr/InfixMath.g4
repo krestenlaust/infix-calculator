@@ -1,5 +1,9 @@
 grammar InfixMath;
 
+expr
+    : NUMBER
+    | expr OP expr
+    ;
 
 OP
     : PLUS
