@@ -1,5 +1,7 @@
 grammar InfixMath;
 
+mainExpr : expr EOF;
+
 expr
     : NUMBER
     | expr OP_FIRST expr
