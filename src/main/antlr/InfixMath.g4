@@ -3,9 +3,10 @@ grammar InfixMath;
 mainExpr : expr EOF;
 
 expr
-    : NUMBER
+    : OBRACE expr CBRACE
     | expr OP_FIRST expr
     | expr OP_SECOND expr
+    | NUMBER
     ;
 
 // First precedence operators
@@ -25,8 +26,8 @@ MINUS : '-';
 MULTIPLY : '*';
 DIVIDE : '/';
 
-OPAREN : '(';
-CPAREN : ')';
+OBRACE : '(';
+CBRACE : ')';
 
 NUMBER
     : INTEGER

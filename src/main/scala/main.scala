@@ -3,8 +3,7 @@ import org.antlr.v4.runtime.tree.ParseTreeWalker
 
 @main
 def main(): Unit =
-  println("Hello world!")
-  val input = "3 + 4 * 5 - 2"
+  val input = "(3 + 4) * 5 - 2"
 
   val lexer = InfixMathLexer(CharStreams.fromString(input))
   val tokens = CommonTokenStream(lexer)
