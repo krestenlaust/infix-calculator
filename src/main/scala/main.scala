@@ -16,4 +16,6 @@ def main(): Unit =
 
   walker.walk(listener, tree)
 
-  println(listener.result)
+  val res = listener.result
+
+  println(s"$input = $res")
